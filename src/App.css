@@ -1,1 +1,47 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 30vw;
+    max-width: 500px;
+}
 
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px gray;
+    height: 60px;
+    padding: 0px 20px;
+}
+
+.list {
+    border: solid 2px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.button {
+    font-size: 16px;
+}
+
+h2 {
+    font: 24px;
+}

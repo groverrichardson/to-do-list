@@ -1,14 +1,18 @@
 import React from "react";
-import "./App.css";
+import "../../src/App.css";
 
-function Task(props) {
-    return (
-        <div>
-            <p className="task-description">{props.task.description}</p>
-            <button className="button edit">Button</button>
-            <button className="button delete">Delete</button>
-        </div>
-    );
+class Task extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        console.log(this.props.taskStateHandler);
+        return (
+            <div className="task">
+                {this.props.taskStateHandler(this.props.task)}
+            </div>
+        );
+    }
 }
 
 export default Task;
