@@ -1,17 +1,15 @@
 import React from "react";
-import Tasks from "../sample-data";
+import Task from "../Task/Task";
+import "./App.css";
 
 class TaskList extends React.Component {
     render() {
-        function renderTasks() {
-            Object.values(Tasks)[0].map((i) => {
-                console.log("hi");
-            });
-        }
-        renderTasks();
+        console.log(this.props.tasks);
         return (
             <div>
-                <h1>hi</h1>
+                {this.props.tasks.map((task, i) => (
+                    <Task task={task} key={i} />
+                ))}
             </div>
         );
     }
