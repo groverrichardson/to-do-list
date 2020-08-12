@@ -1,16 +1,16 @@
-import React from "react";
-import TaskList from "./TaskList/TaskList";
-import Tasks from "./sample-data";
-import "normalize.css";
-import "./App.css";
+import React from 'react';
+import TaskList from './TaskList/TaskList';
+import Tasks from './sample-data';
+import 'normalize.css';
+import './App.css';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tasks: Tasks.tasks,
-            numberOfTasks: Tasks.tasks.length,
-            inputValue: "",
+            tasks: [],
+            numberOfTasks: 0,
+            inputValue: '',
         };
     }
 
@@ -42,7 +42,7 @@ class App extends React.Component {
         this.setState({
             inputValue: value,
         });
-        console.log("Value updated");
+        console.log('Value updated');
     };
 
     turnOffEditMode = (task) => {
@@ -70,7 +70,7 @@ class App extends React.Component {
         this.setState({
             tasks: updatedArray,
         });
-        console.log("State Set");
+        console.log('State Set');
     };
 
     saveTask = (task) => {
